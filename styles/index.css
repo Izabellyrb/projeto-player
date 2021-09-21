@@ -1,0 +1,54 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15% 90%; 
+    grid-template-areas: 
+    'headerl headerr'
+    'left right';
+    background-image: linear-gradient(45deg, var(--yellow) 60%, var(--purple) 40%);
+    background-attachment: fixed;
+}
+
+.logo {
+    grid-area: headerl;
+    justify-content: left;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.menu ul, li, a {
+    grid-area: headerr;
+    display: flex;
+    justify-content:right;
+    padding-right: 2rem;
+    list-style: none;
+    color: var(--light);
+    font-size: 2rem;
+}
+
+li a:hover {
+    color: #ffffff;
+}
+
+.titleSubtitle {
+    grid-area: left;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 10rem;
+}
+.titleSubtitle h1 {
+    font-size: 12rem;
+    margin-bottom: 5rem;
+}
+
+.titleSubtitle h2 {
+    font-size: 3rem;
+
+}
+
+.visual img {
+    grid-area: right;
+    display: flex; 
+    width: 45rem;
+}
