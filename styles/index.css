@@ -1,29 +1,79 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 15% 90%; 
+    grid-template-rows: 15% 85%; 
     grid-template-areas: 
-    'headerl headerr'
+    'header1 header2'
     'left right';
     background-image: linear-gradient(45deg, var(--yellow) 60%, var(--purple) 40%);
     background-attachment: fixed;
 }
 
 .logo {
-    grid-area: headerl;
+    grid-area: header1;
     justify-content: left;
-    margin-top: 1rem;
+    margin-top: 5rem;
     margin-left: 2rem;
 }
 
-.menu ul, li, a {
-    grid-area: headerr;
+.menu ul, li, a { /*menu na tela normal*/
+    grid-area: header2;
     display: flex;
-    justify-content:right;
-    padding-right: 2rem;
+    flex-direction: row;
+    justify-content: right;
+    padding: 2rem;
     list-style: none;
     color: var(--light);
-    font-size: 2rem;
+    font-size: 2.5rem;
+
+}
+
+.menuSection .menuToggle { /*3 - ativados aparecem no fullscreen*/
+    position: absolute;  
+    right: 1.5rem;
+    top: 5.0rem;
+}
+
+.menu, .menu ul {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/*menu toggle fullscreen*/
+.menuSection.on {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--lgpurple);
+    z-index: 10; 
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuSection.on nav {
+    display: block;
+
+}
+
+.menuSection.on .menuToggle .um {  /*3 - no fullscreen viram um X*/
+    transform: rotate(45deg) translate(7px, 7px);
+}
+.menuSection.on .menuToggle .dois {  /*3 - no fullscreen viram um X*/
+    opacity: 0;
+}
+.menuSection.on .menuToggle .tres {  /*3 - no fullscreen viram um X*/
+    transform: rotate(-45deg) translate(10px, -10px);
+}
+
+.menuSection.on .menuToggle ul li a {
+    transition-duration: 0.5s;
+    font-size: 3rem;
+    line-height: 10rem;
+    color: var(--light);
+    grid-area: header1;
+    margin: 0;
+
 }
 
 li a:hover {
@@ -38,17 +88,128 @@ li a:hover {
     margin-left: 10rem;
 }
 .titleSubtitle h1 {
-    font-size: 12rem;
+    font-size: 15rem;
     margin-bottom: 5rem;
 }
 
 .titleSubtitle h2 {
-    font-size: 3rem;
-
+    font-size: 4rem;
 }
 
 .visual img {
     grid-area: right;
     display: flex; 
-    width: 45rem;
+    width: 60rem;
+    margin-left: 10rem;
+}
+
+/*media queries*/
+
+/*Laptop - Medium*/
+@media (max-width:1024px) {
+    .logo1 {
+        width: 15rem;
+    }
+    
+    .menu ul, li, a {
+       font-size: 1.5rem;
+    }
+    
+    .titleSubtitle {
+        margin-left: 5rem;
+    }
+
+    .titleSubtitle h1 {
+        font-size: 10rem;
+    }
+
+    .titleSubtitle h2 {
+        font-size: 3rem;
+    }
+    
+    .visual img {
+        grid-area: right;
+        display: flex; 
+        width: 38.5rem;
+        margin-left: 5rem;
+    }
+}
+
+/*Tablet*/
+@media (max-width:768px) {
+    .logo1 {
+        width: 15rem;
+    }
+    
+    .menu ul, li, a {
+       font-size: 1.5rem;
+       padding: 1rem;
+    }
+    
+    .titleSubtitle {
+        margin-left: 5rem;
+    }
+    .titleSubtitle h2 {
+        font-size: 2.5rem;
+    }
+    
+    .visual img {
+        grid-area: right;
+        display: flex; 
+        width: 25rem;
+        margin-left: 2rem;
+    }
+}
+
+/*Mobile - Large*/
+@media (max-width: 425px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'header1'
+        'left';
+        background-image: linear-gradient(45deg, var(--yellow) 75%, var(--purple) 15%);
+    }
+
+    .logo {
+        width: 10rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .menuToggle { /*tamanho das linhas do menu*/
+        width: 4rem;
+        height: 4rem;
+        margin-top: -4rem;
+    }
+
+    .um, .dois, .tres {
+        background-color: #ffffff;
+        height: 0.6rem;
+        width: 100%;
+        margin: 0.6rem auto;
+        transition-duration: 0.3s;
+    }
+
+    .titleSubtitle {
+        margin: 0;
+    }
+
+    .titleSubtitle h1 {
+        margin: 0;
+        font-size: 6rem; 
+    }
+
+    .titleSubtitle h2 {
+        font-size: 2.5rem;
+        margin-top: 2rem
+    }
+    
+    .visual img {
+        display: none;
+    }
 }
