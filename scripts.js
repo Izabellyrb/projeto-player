@@ -11,7 +11,6 @@ function alterarOut() {
     img.src = '/images/visual.png'
     }
 
-
 //menu hamburguer
 let show = true;
                 
