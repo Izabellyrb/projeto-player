@@ -4,13 +4,12 @@ img.addEventListener('mouseover', alterarIn)
 img.addEventListener('mouseout', alterarOut)
 
 function alterarIn() {
-    img.src = '/images/visual2.png'
+    img.src = './images/visual2.png'
 }
 
 function alterarOut() {
-    img.src = '/images/visual.png'
+    img.src = './images/visual.png'
     }
-
 
 //menu hamburguer
 let show = true;
