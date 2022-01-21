@@ -3,9 +3,11 @@
 # projeto-player
 Projeto de criação de uma página na web sobre um app de áudio chamado NowListen.<br>
 ### Recursos
+- [x] HTML e CSS
 - [x] Mudança de imagens com JS
-- [x] Responsividade (media queries)
-- [x] Menu hamburguer
+- [x] Layout responsivo
+- [x] Menu responsivo com Javascript
+
 <h4 align="center"> 
 	:heavy_check_mark:  Finalizado
 </h4>
