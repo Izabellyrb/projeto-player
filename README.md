@@ -1,7 +1,7 @@
 <img alt="logoLinha" title="NowListen" src="./images/logoLinha.png" />
 
 # projeto-player
-Projeto de criação de uma página na web sobre um app de áudio chamado NowListen.<br>
+Projeto de criação de uma landing page simples de um aplicativo de áudio chamado NowListen.<br>
 ### Recursos
 - [x] HTML e CSS
 - [x] Mudança de imagens com JS
