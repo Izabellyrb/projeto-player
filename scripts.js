@@ -5,11 +5,14 @@ img.addEventListener('mouseout', alterarOut)
 
 function alterarIn() {
     img.src = './images/visual2.png'
+    img.classList.add('transition')
 }
 
 function alterarOut() {
     img.src = './images/visual.png'
+    img.classList.remove('transition')
     }
+
 
 //menu hamburguer
 let show = true;
