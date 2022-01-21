@@ -208,13 +208,15 @@ body {
     }
 
     .menu ul li, a { /*menu na tela normal*/
-        padding: 2rem 0;
+        padding: 3rem 0;
+        font-size: 2.5rem;
     }
 
     .menuToggle { /*tamanho das linhas do menu*/
         width: 4rem;
         height: 4rem;
         margin-top: -2rem;
+        margin-right: 2rem;
     }
 
     .um, .dois, .tres {
@@ -231,7 +233,7 @@ body {
 
     .titleSubtitle h1 {
         margin: 0;
-        font-size: 6rem; 
+        font-size: 6rem;
     }
 
     .titleSubtitle h2 {
